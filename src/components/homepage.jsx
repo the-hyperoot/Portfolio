@@ -4,7 +4,9 @@ export default function Homepage() {
     return (
         <>
             <section>
-                test
+                <div className="container">
+
+                </div>
             </section>
         </>
     )

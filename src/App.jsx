@@ -1,16 +1,17 @@
-import "./App.css";
+import "./css/app.css";
+import Overlay from "./components/overlay";
 import Homepage from "./components/homepage";
+
+// eslint-disable-next-line no-unused-vars
 import BlogRedirect from "./components/blog-redirect";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* <BlogRedirect /> */}
-        < Homepage />
-      </header>
+    <div className="app">
+      {/* <BlogRedirect /> */}
+
+      <Overlay />
+      <Homepage />
     </div>
   );
 }
-
-export default App;

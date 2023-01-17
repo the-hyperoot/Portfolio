@@ -1,0 +1,12 @@
+/* !Constants */
+
+:root {
+    /* ---PRIMARY COLORS--- */
+    --COLOR_PRIMARY: #F43F5E;
+
+    /* ---TEXT COLORS--- */
+    --COLOR_TEXT: #eceff4;
+
+    /* ---BACKGROUND COLORS--- */
+    --COLOR_BACKGROUND_ALPHA: #2e3440;
+}

@@ -1,0 +1,10 @@
+@import url('./defaults/constants.css');
+@import url('./defaults/reset.css');
+@import url('./utils.css');
+@import url('./overlay.css');
+
+/* COMMON PROPERTIES */
+.app {
+  background-color: var(--COLOR_BACKGROUND_ALPHA);
+  color: var(--COLOR_TEXT);
+}

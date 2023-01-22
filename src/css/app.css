@@ -8,3 +8,13 @@
   background-color: var(--COLOR_BACKGROUND_ALPHA);
   color: var(--COLOR_TEXT);
 }
+
+.container {
+  height: 100vh;
+  background-color: rgb(149, 199, 199);
+}
+
+.test {
+  height: 100vh;
+  background-color: blueviolet;
+}

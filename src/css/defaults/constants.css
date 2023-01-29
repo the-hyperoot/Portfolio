@@ -10,3 +10,23 @@
     /* ---BACKGROUND COLORS--- */
     --COLOR_BACKGROUND_ALPHA: #2e3440;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--COLOR_BACKGROUND_ALPHA);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--COLOR_TEXT);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--COLOR_PRIMARY);
+}

@@ -8,22 +8,15 @@ import {
     RiBallPenLine,
     RiMailLine,
 } from "react-icons/ri";
-import { useRef } from "react";
 
-import Homepage from "../components/homepage";
-import Experience from "../components/experience";
-
-export default function Overlay() {
+export default function Overlay(props) {
     // ! Menu Toggle
-    const [openMenu, setOpenMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState(true);
     const toggleMenu = () => {
         setOpenMenu(!openMenu);
     };
 
     // ! In-page Navigation
-    const home = useRef(null);
-    const experience = useRef(null);
-
     const scrollToSection = (elementref) => {
         window.scrollTo({
             top: elementref.current.offsetTop,
@@ -35,7 +28,7 @@ export default function Overlay() {
     return (
         <>
             <div className="overlay">
-                <div className="Home" onClick={() => scrollToSection(home)}>
+                <div className="Home" onClick={() => scrollToSection(props.home)}>
                     <button className="top-left flex-center overlay-button">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -47,60 +40,72 @@ export default function Overlay() {
                         </svg>
                     </button>
                 </div>
-                <button
-                    className="top-right flex-center overlay-button"
-                    onClick={toggleMenu}
-                >
-                    <RiMenu5Fill className="icon menu" />
-                </button>
-                <div className={openMenu ? "nav-menu" : "nav-menu nav-menu-show"}>
-                    <ul>
-                        <li className="nav-items" onClick={() => scrollToSection(experience)}>
-                            <button className="flex-center nav-item-button">
-                                <RiBriefcaseLine className="icon" />
-                            </button>
-                            <div className="nav-item-text">
-                                <h2>Experience</h2>
-                            </div>
-                        </li>
-                        <li className="nav-items">
-                            <button className="flex-center nav-item-button">
-                                <RiStackLine className="icon" />
-                            </button>
-                            <div className="nav-item-text">
-                                <h2>Project</h2>
-                            </div>
-                        </li>
-                        <li className="nav-items">
-                            <button className="flex-center nav-item-button">
-                                <RiBallPenLine className="icon" />
-                            </button>
-                            <div className="nav-item-text">
-                                <h2>Blog</h2>
-                            </div>
-                        </li>
-                        <li className="nav-items">
-                            <button className="flex-center nav-item-button">
-                                <RiMailLine className="icon" />
-                            </button>
-                            <div className="nav-item-text">
-                                <h2>Contact</h2>
-                            </div>
-                        </li>
-                    </ul>
+                <div>
+                    <button
+                        className="top-right flex-center overlay-button"
+                        onClick={toggleMenu}
+                    >
+                        <RiMenu5Fill className="icon menu" />
+                    </button>
+                    <div className={openMenu ? "nav-menu" : "nav-menu nav-menu-show"}>
+                        <ul>
+                            <li
+                                className="nav-items"
+                                onClick={() => scrollToSection(props.experience)}
+                            >
+                                <button className="flex-center nav-item-button">
+                                    <RiBriefcaseLine className="icon" />
+                                </button>
+                                <div className="nav-item-text">
+                                    <h2>Experience</h2>
+                                </div>
+                            </li>
+                            <li
+                                className="nav-items"
+                                onClick={() => scrollToSection(props.project)}
+                            >
+                                <button className="flex-center nav-item-button">
+                                    <RiStackLine className="icon" />
+                                </button>
+                                <div className="nav-item-text">
+                                    <h2>Project</h2>
+                                </div>
+                            </li>
+                            <li
+                                className="nav-items"
+                                onClick={() => scrollToSection(props.blog)}
+                            >
+                                <button className="flex-center nav-item-button">
+                                    <RiBallPenLine className="icon" />
+                                </button>
+                                <div className="nav-item-text">
+                                    <h2>Blog</h2>
+                                </div>
+                            </li>
+                            <li
+                                className="nav-items"
+                                onClick={() => scrollToSection(props.contact)}
+                            >
+                                <button className="flex-center nav-item-button">
+                                    <RiMailLine className="icon" />
+                                </button>
+                                <div className="nav-item-text">
+                                    <h2>Contact</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <button className="bottom-left flex-center overlay-button">
-                    <RiArrowDownSLine className="icon" />
-                </button>
-                <button className="bottom-right flex-center overlay-button">
-                    <RiFileList2Line className="icon" />
-                </button>
-            </div>
-            <div className="section" ref={home}>
-                <Homepage />
-            </div>
-            <div className="section" ref={experience}>
-                <Experience />
+                <div>
+                    <button className="bottom-left flex-center overlay-button">
+                        <RiArrowDownSLine className="icon" />
+                    </button>
+                </div>
+                <div>
+                    <button className="bottom-right flex-center overlay-button">
+                        <RiFileList2Line className="icon" />
+                    </button>
+                </div>
             </div>
         </>
     );

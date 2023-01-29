@@ -9,12 +9,11 @@
   color: var(--COLOR_TEXT);
 }
 
+
 .container {
-  height: 100vh;
-  background-color: rgb(149, 199, 199);
+  min-height: 100vh;
 }
 
 .test {
-  height: 100vh;
-  background-color: blueviolet;
+  min-height: 100vh;
 }

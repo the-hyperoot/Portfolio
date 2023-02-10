@@ -1,7 +1,8 @@
-import "./css/app.css";
-import Overlay from "./components/overlay";
-
 import { useRef } from "react";
+
+import "./css/app.css";
+
+import Overlay from "./components/overlay";
 import Homepage from "./components/homepage";
 import Experience from "./components/experience";
 import Project from "./components/project";

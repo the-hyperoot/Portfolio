@@ -1,4 +1,3 @@
-/* !Overlay */
 .overlay {
     z-index: 20;
     position: fixed;
@@ -6,170 +5,150 @@
     height: 100vh;
 }
 
-.overlay-button {
+/* !Logo [top-left] */
+
+.logo-container {
     position: absolute;
-    border-style: solid;
-    border-width: 1px;
-    color: var(--COLOR_TEXT);
     width: 3rem;
     height: 3rem;
-    transition: 0.3s;
-}
-
-.top-left {
     top: 5vh;
     left: 7.5vw;
 }
 
-.top-right {
-    top: 5vh;
-    right: 7.5vw;
-}
-
-.bottom-left {
-    bottom: 5vh;
-    left: 7.5vw;
-}
-
-.bottom-right {
-    bottom: 5vh;
-    right: 7.5vw;
-}
-
-.icon {
-    transition: 0.3s;
+.logo-button {
     position: relative;
-    color: var(--COLOR_TEXT);
-    width: 50%;
-    height: 50%;
-}
-
-.logo>path {
-    transition: 0.3s;
+    height: 100%;
+    width: 100%;
+    padding: 25%;
     fill: var(--COLOR_TEXT);
+    color: var(--COLOR_TEXT);
+    border-style: solid;
+    border-width: thin;
 }
 
-.overlay-button:hover {
-    color: var(--COLOR_PRIMARY);
-    z-index: 21;
-}
-
-.overlay-button:hover .icon {
-    color: var(--COLOR_PRIMARY);
-}
-
-.overlay-button:hover .logo>path {
+.logo-button:hover {
     fill: var(--COLOR_PRIMARY);
+    color: var(--COLOR_PRIMARY);
 }
 
-@media (max-width: 540px) {
-    .top-left {
-        width: 3rem;
-        height: 3rem;
-        top: 1rem;
-        left: 1rem;
-        transform: none;
-    }
+/* !Nav Menu [top-right] */
 
-    .top-right {
-        width: 3rem;
-        height: 3rem;
-        top: 1rem;
-        right: 1rem;
-        transform: none;
-    }
-
-    .bottom-left {
-        display: none;
-    }
-
-    .bottom-right {
-        display: none;
-    }
+.nav-container {
+    position: absolute;
+    top: 5vh;
+    right: 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-/* Nav Menu */
-.nav-menu {
+.nav-items {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: right;
+    border-style: solid;
+    border-width: thin;
+    margin-bottom: 1rem;
+}
+
+.hide {
     transition: all 300ms ease-in-out;
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 
-.nav-menu-show {
+.show {
     visibility: visible;
     opacity: 1;
 }
 
-.nav-menu>ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: calc(10vh + 3rem);
-    right: 7.5%;
-}
-
-.nav-items {
-    border-style: solid;
-    border-width: thin;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    /* border-bottom: none; */
-    margin-top: 0.5rem;
-}
-
-
-/* .nav-items:last-child {
-    border-bottom: thin solid var(--COLOR_TEXT);
-} */
-
-.nav-item-button {
-    transition: all 300ms ease-in-out;
-    color: var(--COLOR_TEXT);
-    width: calc(3rem - 2px);
+.nav-button {
+    width: 3rem;
     height: 3rem;
 }
 
+.nav-icon {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 25%;
+    color: var(--COLOR_TEXT);
+}
+
 .nav-item-text {
-    transition: all 300ms ease-in-out;
-    display: none;
-    font-size: 10px;
-    padding: 0.5rem;
     color: var(--COLOR_PRIMARY);
+    padding: 0.5rem;
+    display: none;
 }
 
 .nav-items:hover {
     color: var(--COLOR_PRIMARY);
-    border-bottom: thin solid var(--COLOR_PRIMARY);
+    z-index: 10;
 }
 
-.nav-items:hover:nth-child(n) {
+.nav-items:hover .nav-icon {
     color: var(--COLOR_PRIMARY);
-    z-index: 21;
 }
 
 .nav-items:hover .nav-item-text {
     display: inline-block;
 }
 
-.nav-items:hover .icon {
+/* !Next Section [bottom-left] */
+
+.next-section-container {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: 5vh;
+    left: 7.5vw;
+}
+
+.next-section-button {
+    width: 100%;
+    height: 100%;
+    padding: 25%;
+    position: relative;
+    color: var(--COLOR_TEXT);
+    border-style: solid;
+    border-width: thin;
+}
+
+.next-section-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.next-section-button:hover {
     color: var(--COLOR_PRIMARY);
 }
 
-@media (max-width: 540px) {
-    .nav-items {
-        width: 50%;
-    }
+/* !Blog [bottom-right] */
 
-    .nav-menu>ul {
-        top: 5rem;
-        right: 1rem;
-        width: calc(100vw - 2rem);
-    }
+.blog-container {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    bottom: 5vh;
+    right: 7.5vw;
+}
 
-    .nav-item-text {
-        display: inline-block;
-        color: var(--COLOR_TEXT);
-    }
+.blog-button {
+    width: 100%;
+    height: 100%;
+    padding: 25%;
+    position: relative;
+    color: var(--COLOR_TEXT);
+    border-style: solid;
+    border-width: thin;
+}
+
+.blog-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.blog-button:hover {
+    color: var(--COLOR_PRIMARY);
 }

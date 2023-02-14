@@ -1,5 +1,5 @@
 .overlay {
-    z-index: 20;
+    z-index: 10;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -49,7 +49,7 @@
     justify-content: right;
     border-style: solid;
     border-width: thin;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hide {
@@ -80,11 +80,12 @@
     color: var(--COLOR_PRIMARY);
     padding: 0.5rem;
     display: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 
 .nav-items:hover {
     color: var(--COLOR_PRIMARY);
-    z-index: 10;
 }
 
 .nav-items:hover .nav-icon {

@@ -14,5 +14,9 @@
 }
 
 .test {
+  position: relative;
   min-height: 100vh;
+  max-width: 70vw;
+  top: 15vh;
+  left: 15vw;
 }

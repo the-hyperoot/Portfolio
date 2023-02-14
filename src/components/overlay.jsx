@@ -88,13 +88,13 @@ export default function Overlay(props) {
 
                 <div className="next-section-container">
                     <button className="next-section-button" onClick={() => scrollToSection(props.home)}>
-                        <RiBriefcaseLine className="next-section-icon" />
+                        <RiArrowDownSLine className="next-section-icon" />
                     </button>
                 </div>
 
                 <div className="blog-container">
-                    <button className="blog-button" onClick={() => scrollToSection(props.home)}>
-                        <RiBriefcaseLine className="blog-icon" />
+                    <button className="blog-button" onClick={() => scrollToSection(props.blog)}>
+                        <RiFileList2Line className="blog-icon" />
                     </button>
                 </div>
             </div>

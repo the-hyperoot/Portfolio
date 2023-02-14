@@ -9,6 +9,8 @@ import Project from "./components/project";
 import Blog from "./components/blog";
 import Contact from "./components/contact";
 
+import Bloglist from "./components/Bloglist";
+
 export default function App() {
   // ! In-page Navigation
   const home = useRef(null);
@@ -27,6 +29,10 @@ export default function App() {
         blog={blog}
         contact={contact}
       />
+      <div className="test">
+        <Bloglist />
+
+      </div>
       <div className="section" ref={home}>
         <Homepage />
       </div>

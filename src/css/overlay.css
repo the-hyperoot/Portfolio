@@ -1,14 +1,9 @@
-.overlay {
-    z-index: 10;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-}
-
 /* !Logo [top-left] */
 
 .logo-container {
-    position: absolute;
+    z-index: 10;
+    background-color: var(--COLOR_BACKGROUND_ALPHA);
+    position: fixed;
     width: 3rem;
     height: 3rem;
     top: 5vh;
@@ -23,7 +18,7 @@
     fill: var(--COLOR_TEXT);
     color: var(--COLOR_TEXT);
     border-style: solid;
-    border-width: thin;
+    border-width: 2px;
 }
 
 .logo-button:hover {
@@ -34,7 +29,8 @@
 /* !Nav Menu [top-right] */
 
 .nav-container {
-    position: absolute;
+    z-index: 10;
+    position: fixed;
     top: 5vh;
     right: 7.5vw;
     display: flex;
@@ -48,7 +44,7 @@
     align-items: center;
     justify-content: right;
     border-style: solid;
-    border-width: thin;
+    border-width: 2px;
     margin-bottom: 0.5rem;
 }
 
@@ -66,7 +62,9 @@
 .nav-button {
     width: 3rem;
     height: 3rem;
+    background-color: var(--COLOR_BACKGROUND_ALPHA);
 }
+
 
 .nav-icon {
     position: relative;
@@ -86,6 +84,7 @@
 
 .nav-items:hover {
     color: var(--COLOR_PRIMARY);
+    background-color: var(--COLOR_BACKGROUND_ALPHA);
 }
 
 .nav-items:hover .nav-icon {
@@ -99,7 +98,7 @@
 /* !Next Section [bottom-left] */
 
 .next-section-container {
-    position: absolute;
+    position: fixed;
     width: 3rem;
     height: 3rem;
     bottom: 5vh;
@@ -113,7 +112,8 @@
     position: relative;
     color: var(--COLOR_TEXT);
     border-style: solid;
-    border-width: thin;
+    border-width: 2px;
+
 }
 
 .next-section-icon {
@@ -128,7 +128,7 @@
 /* !Blog [bottom-right] */
 
 .blog-container {
-    position: absolute;
+    position: fixed;
     width: 3rem;
     height: 3rem;
     bottom: 5vh;
@@ -142,7 +142,7 @@
     position: relative;
     color: var(--COLOR_TEXT);
     border-style: solid;
-    border-width: thin;
+    border-width: 2px;
 }
 
 .blog-icon {

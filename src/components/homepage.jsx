@@ -1,13 +1,11 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function Homepage() {
+
     return (
         <>
-            <section>
-                <div className="container">
-
-                </div>
-            </section>
+            Homepage Test
         </>
-    )
+    );
 }

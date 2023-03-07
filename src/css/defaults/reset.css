@@ -13,7 +13,7 @@ html,
 body {
     background-color: var(--COLOR_BACKGROUND_ALPHA);
     font-family: "Montserrat", sans-serif;
-    color: var(--COLOR_TEXT_ONE);
+    color: var(--COLOR_TEXT);
 }
 
 /* ---ELEMENTS--- */

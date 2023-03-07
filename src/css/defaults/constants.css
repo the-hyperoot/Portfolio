@@ -2,18 +2,22 @@
 
 :root {
     /* ---PRIMARY COLORS--- */
-    --COLOR_PRIMARY: #F43F5E;
+    --COLOR_PRIMARY: #5E81AC;
 
     /* ---TEXT COLORS--- */
-    --COLOR_TEXT: #eceff4;
+    --COLOR_TEXT: #2e3440;
 
     /* ---BACKGROUND COLORS--- */
-    --COLOR_BACKGROUND_ALPHA: #2e3440;
+    --COLOR_BACKGROUND_ALPHA: #f8f9fb;
+
+    /* Nord theme */
+
+
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 0.75rem;
 }
 
 /* Track */
